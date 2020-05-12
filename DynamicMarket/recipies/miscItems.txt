@@ -5,7 +5,7 @@ shears: iron_ingot 2
 lantern: iron_nugget 8, torch 1
 bucket: iron_ingot 3
 
-golden_apple: apple 1, golden_ingot 8
+golden_apple: apple 1,_ingot 8
 golden_carrot: gold_nugget 8, carrot 1
 enchanted_golden_apple: gold_block 8, apple 1
 clock: gold_ingot 4, redstone 1

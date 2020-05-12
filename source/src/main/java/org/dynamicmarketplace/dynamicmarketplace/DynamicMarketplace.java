@@ -194,7 +194,7 @@ public final class DynamicMarketplace extends JavaPlugin {
 
     private boolean sellItem ( String item, int quantity, Player player ) {
         Boolean valid = processor.isValidItem(player, item);
-        if ( !valid ) return true;;
+        if ( !valid ) return true;
         int soldAmount = processor.takeItemFromPlayer(item, quantity, player);
         double saleprice = processor.getSalePrice(item, soldAmount);
 

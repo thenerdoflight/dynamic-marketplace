@@ -24,6 +24,10 @@ public class Processor {
     public String getHeldItem ( Player player ) {
         return player.getInventory().getItemInMainHand().getType().toString().toLowerCase() ;
     }
+    public boolean canSell ( ItemStack item, boolean silent ){
+        if ( item.getEnchantments().isEmpty() &&  item.getDurability() == 0 ) return true;
+        return false;
+    }
     public int getHandQuantity ( Player player ){
         return player.getInventory().getItemInMainHand().getAmount();
     }
@@ -167,6 +171,7 @@ public class Processor {
         int taken = 0;
         for (ItemStack i : player.getInventory()) {
             if ( i == null ) continue;
+            if ( ! canSell( i, false )) continue;
 
             if ( i.getType() == itemMaterial && amount > 0 ) {
 
@@ -190,29 +195,16 @@ public class Processor {
         HashMap<String,Integer> itemNumbers = new HashMap<String,Integer>();
         for (ItemStack i : player.getInventory()) {
             if ( i == null ) continue;
+            if ( ! canSell(i, true)) continue;
             String itemName = i.getType().name().toLowerCase();
             if ( isValidItem( player, itemName, true )){
                 if ( itemNumbers.containsKey(itemName))
                     itemNumbers.put(itemName, itemNumbers.get(itemName) + i.getAmount());
                 else
                     itemNumbers.put(itemName, i.getAmount());
+                i.setAmount(0);
             }
         }
-        for (HashMap.Entry<String, Integer> entry : itemNumbers.entrySet()) {
-            player.getInventory().remove(getItemMaterial(entry.getKey()));
-        }
-
-        String offhandName = player.getInventory().getItemInOffHand().getType().name().toLowerCase();
-        if ( itemNumbers.containsKey(offhandName))
-            player.getInventory().setItemInOffHand(null);
-
-        ItemStack[] armor = player.getInventory().getArmorContents();
-        for ( ItemStack i : armor ){
-            if ( i == null ) continue;
-            if ( itemNumbers.containsKey(i.getType().name().toLowerCase()))
-                i.setType(Material.AIR);
-        }
-        player.getInventory().setArmorContents(armor);
 
         return itemNumbers;
     }
