@@ -1,0 +1,19 @@
+cobblestone: 1
+andesite: 5
+diorite: 5
+granite: 5
+
+obsidian: 1000
+
+grass_block: 10
+dirt: 1
+podzol: 5
+mycelium: 40
+
+red_sand: 20
+sand: 5
+
+clay_ball: 10
+gravel: 5
+
+ice: 40
