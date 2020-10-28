@@ -6,7 +6,7 @@
 
     <groupId>org.dynamicmarketplace</groupId>
     <artifactId>dynamic-marketplace</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 
     <name>Dynamic Marketplace</name>
@@ -74,9 +74,9 @@
         <dependency>
             <groupId>net.milkbow.vault</groupId>
             <artifactId>Vault</artifactId>
-            <version>1.7</version>
+            <version>1.7.3</version>
             <scope>system</scope>
-            <systemPath>C:/Users/Eric Robertson/Documents/Projects/Minecraft/Server/plugins/Vault.jar</systemPath>
+            <systemPath>C:\Users\Ice Cream\Desktop\20200924-163500-63b7a3aaef8f4c3c840744e492b8526b\plugins\Vault-1.7.3.jar</systemPath>
         </dependency>
     </dependencies>
 </project>

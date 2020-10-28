@@ -58,7 +58,8 @@ public final class DynamicMarketplace extends JavaPlugin {
         Player player = (Player) sender;
         int count = 0;
 
-        switch ( command.getName().toLowerCase() ){
+        if (player.hasPermission("dynamicmarket.use")) {
+        	switch ( command.getName().toLowerCase() ){
 
             // Item Info
 
@@ -113,6 +114,12 @@ public final class DynamicMarketplace extends JavaPlugin {
                 return sellAll(player);
 
         }
+        	
+        }else {
+        	player.sendMessage("You do not have permssion");
+        }
+        
+ 
         return true;
     }
 
