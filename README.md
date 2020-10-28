@@ -1,4 +1,7 @@
-### Eric Robertson created this plugin. I forked it from his repo.
+### Eric Robertson created this plugin. I forked it from his repo, and it looks like this:
+![img1](https://raw.githubusercontent.com/thenerdoflight/dynamic-marketplace/master/img1.PNG) ![img2](https://raw.githubusercontent.com/thenerdoflight/dynamic-marketplace/master/img2.PNG)
+
+## Here's what I did
 
 **Major Change:**  Added a permission node aptly named '***dynamicmarket.use***'
 This node allows the usage of all dynamic market's commands that were previously accessible without a permission system.
@@ -11,7 +14,7 @@ Ex. If you want to sell an item for $10. Using the Matlab program, with Quantity
 I can't code, so don't expect anything good. This page will be updated as the plugin updates.
 
 
-# TL;DR Push this into Eclipse
+# Also Install TL;DR: Push this into Eclipse
 
 ### Install Steps
 - The Folder `Dynamic Market` should be put into the plugins folder of the server. It contains the data about recipies that is loaded by the plugin on startup.
