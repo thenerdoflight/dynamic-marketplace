@@ -6,6 +6,9 @@
 **Major Change:**  Added a permission node aptly named '***dynamicmarket.use***'
 This node allows the usage of all dynamic market's commands that were previously accessible without a permission system.
 
+**Planned Change:** Overhaul crafting calculation - this is in response to possible duping/ unlimited market.
+Revise cost calculation - Possible negative selling price
+
 **Other**
 I have also written a Matlab program that determines the DynamicMarket cost given a selling price.
 Ex. If you want to sell an item for $10. Using the Matlab program, with Quantity Scaler @ 25000 and tax at 2, the DynamicMarket cost would be 80.
